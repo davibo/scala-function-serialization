@@ -15,16 +15,16 @@ class FunctionSerialization(var a: Int) {
   def h1(x: Int): Int => Int = y => x + y
 
   def getSomeFun: Int => Int = {
-//    val someFun = f(a) //compile error
-//    val someFun = (y: Int) => { g(this.getA, y) }
+//    val someFun = f1(getA) //comile error
+//    val someFun = (y: Int) => { g2(this.getA, y) }
 
 //    val someFun = f1(getA) _ //serialization error
 //    val someFun = g1(getA, _) //serialization error
 //    val someFun = h1(a)
 
 //    val someFun = f2(getA) _
-    val someFun = g2(getA, _)
-//    val someFun = h2(getA)
+//    val someFun = g2(getA, _)
+    val someFun = h2(getA)
     println("Created someFun")
     someFun
   }
